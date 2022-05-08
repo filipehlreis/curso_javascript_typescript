@@ -1,84 +1,46 @@
-const verdadeira = true;
-
-/**
- * LET tem escopo de bloco { ... bloco }
- * VAR só tem escopo de função
- */
-
-
 /*
-let nome = 'Luiz';
-var nome2 = 'Luiz';
+let a = 'A'; // B
+let b = 'B'; // C
+let c = 'C'; // A
+
+const letras = [b, c, a];
+[a, b, c] = letras;
 
 
-if (verdadeira) {
-    console.log(nome, nome2);
-}
-
-if (verdadeira) {
-    let nome = 'Otavio';
-    console.log(nome, nome2);
-
-    if (verdadeira) {
-        let nome = 'Outra coisa'
-        console.log('OK', nome, nome2);
-    }
-
-    console.log(nome, nome2);
-
-}
-
+console.log(a, b, c);
 */
 
 
-
-
 /*
-let nome = 'Luiz'; // criando
-var nome2 = 'Luiz';
+//    ... rest, ... spread
+const numeros = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-if (verdadeira) {
-    let nome = 'Otavio';
-    var nome2 = 'Rogerio'
-    console.log(nome, nome2);
+const [um, dois, tres, ...resto] = numeros;
 
-    if (verdadeira) {
-        let nome = 'Outra coisa'
-        var nome2 = 'Ronaldo'
-        console.log(nome, nome2);
-    }
-    console.log(nome, nome2);
-
-    // console.log(nome, nome2);
-
-}
-console.log(nome, nome2);
-
+console.log(um, dois, tres);
+console.log(resto);
 */
 
 
-
 /*
-function falaOi() {
+//    ... rest, ... spread
+const numeros = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-    if (verdadeira) {
-        let nome = 'Luiz';
-        var sobrenome = 'Miranda';
-    }
-    console.log(sobrenome);
-}
+const [um, , tres, , cinco, , sete] = numeros;
 
-falaOi();
+console.log(um, tres, cinco);
 */
 
+//                   0          1          2
+//                0  1  2    0  1  2    0  1  2
+const numeros = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+console.log(numeros[1][2]);
+
+const [, [, , seis]] = numeros;
+
+console.log(seis);
 
 
-
-console.log(sobrenome)
-console.log(nome)
-
-
-
-
-let nome = 'Otavio'
-var sobrenome = 'Miranda';
+const [lista1, lista2, lista3] = numeros;
+console.log(lista3);
+console.log(lista3[2]); 
