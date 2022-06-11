@@ -1,11 +1,10 @@
 exports.middlewareGlobal = (req, res, next) => {
-    res.locals.umaVariavelLocal = 'este é o valor da variavel local.';
+    res.locals.errors = req.flash('errors');
+    res.locals.success = req.flash('success');
     next();
 };
 
 exports.outroMiddleware = (req, res, next) => {
-    // Codigo
-    console.log('Sou seu outro middleware');
     next();
 };
 
