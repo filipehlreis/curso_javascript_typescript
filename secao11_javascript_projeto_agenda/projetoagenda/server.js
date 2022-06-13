@@ -21,7 +21,11 @@ const app = express();
 // inicializacao do mongoose, que será responsavel por modelar nossos dados e 
 // garantir que os dados salvos sao realmente da forma que gostariamos de salvar
 const mongoose = require('mongoose');
-mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTIONSTRING,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
     .then(() => {
         app.emit('pronto');
     })
