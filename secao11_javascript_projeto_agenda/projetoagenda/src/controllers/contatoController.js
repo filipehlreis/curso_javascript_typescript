@@ -8,9 +8,8 @@ exports.index = (req, res) => {
 
 exports.register = async (req, res) => {
     try {
-        const contato = new Contato(req.body);
+        const contato = new Contato(req.body, req.session.user.email);
         await contato.register();
-
 
         if (contato.errors.length > 0) {
             req.flash('errors', contato.errors);
@@ -26,7 +25,6 @@ exports.register = async (req, res) => {
         console.log(e);
         return res.render('404');
     }
-
 };
 
 
@@ -71,5 +69,4 @@ exports.delete = async function (req, res) {
     req.flash('success', 'Contato apagado com sucesso.');
     req.session.save(() => res.redirect(`/`));
     return;
-
 };

@@ -8,8 +8,15 @@
 
                 <div class="col-lg-8 my-3">
                     <h1 class="text-center">Contato</h1>
-                    <p class="text-center lead">Crie ou edite seu contato abaixo.</p>
-
+                    
+                    <% if (!contato._id) { %>
+                        <p class="text-center lead"> Olá, <%= user.email %>!</p>
+                        <p class="text-center lead"> Crie um contato logo abaixo:</p>
+                    <% } else { %>
+                        <p class="text-center lead"> Olá, <%= user.email %>!</p>
+                        <p class="text-center lead"> Deseja editar o contato? Edite logo abaixo:</p>
+                    <% } %>
+                    
 
                     <%- include('includes/messages')  %> 
 
