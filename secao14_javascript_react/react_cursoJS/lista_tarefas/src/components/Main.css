@@ -48,7 +48,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .tarefas li:hover {
@@ -78,3 +78,7 @@
   cursor: pointer;
 }
 
+.tarefas li span {
+  display: flex;
+  align-items: center;
+}
