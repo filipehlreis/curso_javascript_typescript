@@ -34,5 +34,6 @@ module.exports = {
     'react/state-in-constructor': 'off',
     'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     'prettier/prettier': 'off',
+    'react/forbid-prop-types': 0,
   },
 };

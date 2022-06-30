@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-
-// Form
-import { FaPlus } from 'react-icons/fa';
-
-// Tarefas
-import { FaEdit, FaWindowClose } from 'react-icons/fa';
+import Form from './Form';
+import Tarefas from './Tarefas';
 
 import './Main.css';
 
@@ -55,7 +51,6 @@ export default class Main extends Component {
         novaTarefa: '',
       });
     }
-
   }
 
   handleChange = (e) => {
@@ -68,7 +63,6 @@ export default class Main extends Component {
     console.log('Edit', index);
 
     const { tarefas } = this.state;
-
 
     this.setState({
       index,
@@ -84,7 +78,6 @@ export default class Main extends Component {
     this.setState({
       tarefas: [...novasTarefas],
     });
-
   }
 
   render() {
@@ -94,35 +87,17 @@ export default class Main extends Component {
       <div className='main'>
         <h1>Lista de Tarefas</h1>
 
-        <form onSubmit={this.handleSubmit} action='#' className='form'>
-          <input
-            onChange={this.handleChange}
-            type='text'
-            value={novaTarefa} />
-          <button type='submit'>
-            <FaPlus />
-          </button>
-        </form>
+        <Form
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+          novaTarefa={novaTarefa}
+        />
 
-        <ul className='tarefas'>
-          {tarefas.map((tarefa, index) => (
-            <li key={tarefa}>
-              {tarefa}
-              <span>
-                <FaEdit
-                  onClick={(e) => this.handleEdit(e, index)}
-                  className='edit'
-                />
-
-
-                <FaWindowClose
-                  onClick={(e) => this.handleDelete(e, index)}
-                  className='delete'
-                />
-              </span>
-            </li>
-          ))}
-        </ul>
+        <Tarefas
+          handleEdit={this.handleEdit}
+          handleDelete={this.handleDelete}
+          tarefas={tarefas}
+        />
 
       </div>
     );
