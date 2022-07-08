@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types';
 import * as types from '../types';
 
 const initialState = {
   botaoClicado: false,
 };
 
-export default function (state = initialState, action) {
+// eslint-disable-next-line default-param-last
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case types.BOTAO_CLICADO_SUCCESS: {
       console.log('Sucesso');
