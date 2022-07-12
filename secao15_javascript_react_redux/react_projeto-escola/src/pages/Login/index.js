@@ -6,7 +6,7 @@ import { get } from 'lodash';
 
 import { Container } from '../../styles/GlobalStyles';
 import { Form } from './styled';
-import * as actions from '../../store/modules/auth/action';
+import * as actions from '../../store/modules/auth/actions';
 
 import Loading from '../../components/Loading';
 
