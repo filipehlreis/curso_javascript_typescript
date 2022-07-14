@@ -14,7 +14,7 @@ export function loginSuccess(payload) {
   };
 }
 
-export function LoginFailure(payload) {
+export function loginFailure(payload) {
   return {
     type: types.LOGIN_FAILURE,
     payload,

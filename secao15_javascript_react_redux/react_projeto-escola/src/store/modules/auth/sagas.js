@@ -19,7 +19,7 @@ function* loginRequest({ payload }) {
   } catch (error) {
     toast.error('Usuário ou senha inválidos.');
 
-    yield put(actions.LoginFailure());
+    yield put(actions.loginFailure());
   }
 }
 
@@ -61,7 +61,7 @@ function* registerRequest({ payload }) {
 
     if (status === 401) {
       toast.error('Você precisa fazer login novamente.');
-      yield put(actions.LoginFailure());
+      yield put(actions.loginFailure());
       return history.push('/login');
     }
 
