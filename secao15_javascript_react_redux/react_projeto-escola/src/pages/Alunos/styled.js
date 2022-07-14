@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const AlunoContainer = styled.div`
-  margin-top: 30px;
+  margin-top: 20px;
 
   div {
     display: flex;
