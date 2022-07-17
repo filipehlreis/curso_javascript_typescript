@@ -12,15 +12,22 @@ Não canso de ouvir a Maria:
 `;
 
 const arquivos = [
-    'Atenção.jpg',
-    'FOTO.jpeg',
-    'Meu gatinho.jpg',
-    'Meu gatinho.JPG',
-    'Marido.png',
-    'lista de compras.txt'
+  'Atenção.jpg',
+  'FOTO.jpeg',
+  'Meu gatinho.jpg',
+  'Meu gatinho.JPG',
+  'Marido.png',
+  'lista de compras.txt'
 ];
 
 const html = '<p>Olá mundo</p> <p>Olá de novo</p> <div>Sou a div</div>';
+
+const html2 = `<p 
+data-teste='teste' 
+class="teste teste">
+  Olá mundo
+</p> <p>Olá mundo</p> <div>Sou a div</div>`;
+
 
 const alfabeto_texto = `
 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -53,5 +60,5 @@ Os Ips são:
 
 
 module.exports = {
-    texto, arquivos, html, alfabeto_texto, cpfs, cpfs2, ips
+  texto, arquivos, html, alfabeto_texto, cpfs, cpfs2, ips, html2
 }
