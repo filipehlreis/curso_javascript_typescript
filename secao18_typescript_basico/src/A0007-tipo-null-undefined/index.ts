@@ -24,5 +24,5 @@ const squareOfTwoString = squareOf('2');
 if (typeof squareOfTwoNumber === null) {
   console.log('conta invalida', squareOfTwoNumber);
 } else {
-  console.log(squareOfTwoNumber * 2);
+  console.log('squareOfTwoNumber * 2'); //eslint-disable-line
 }
