@@ -11,6 +11,8 @@ import { Product } from './classes/product';
 import { ShoppingCart } from './classes/shopping-cart';
 // import { FiftyPercentDiscount, NoDiscount, TenPercentDiscount } from './classes/discount';
 import { NoDiscount } from './classes/discount';
+import { EnterpriseCustomer } from './classes/customer';
+// import { IndividualCustomer } from './classes/customer';
 
 // const fiftyPercentDiscount = new FiftyPercentDiscount();
 // const tenPercentDiscount = new TenPercentDiscount();
@@ -18,7 +20,21 @@ const noDiscount = new NoDiscount();
 const shoppingCart = new ShoppingCart(noDiscount);
 const messaging = new Messaging();
 const persistancy = new Persistancy();
-const order = new Order(shoppingCart, messaging, persistancy);
+// const individualCustomer = new IndividualCustomer(
+//   'Filipe',
+//   'Reis',
+//   '111.111.111-11',
+// );
+const enterpriseCustomer = new EnterpriseCustomer(
+  'Alegria e Ração',
+  '460-68765.489',
+);
+const order = new Order(
+  shoppingCart,
+  messaging,
+  persistancy,
+  enterpriseCustomer,
+);
 
 shoppingCart.addItem(new Product('Camiseta', 49.9523));
 shoppingCart.addItem(new Product('Caderno', 9.9));
