@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  postgres_strapi_api:
+    container_name: postgres_strapi_api
+    hostname: postgres_strapi_api
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: senha
+      POSTGRES_DB: blog-strapi
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+        - C:\github\curso_javascript_typescript\secao29_typescript_nextjs_strapi\backup_docker:/var/lib/postgresql/data/pgdata
+    ports:
+        - 5432:5432
