@@ -1,5 +1,17 @@
 {
   "dependencies": {
-    "docker-compose": "^0.23.17"
-  }
+    "docker-compose": "^0.23.17",
+    "knex": "^2.2.0",
+    "mysql2": "^2.3.3"
+  },
+  "name": "secao31_base_de_dados_relacionais",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
